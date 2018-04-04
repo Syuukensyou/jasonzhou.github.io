@@ -1,7 +1,7 @@
 ---
 layout: post
-title:Python Learning 1
-key:2018040401
+title: Python Learning 1
+key: 20180404
 tags: Python getpass
 ---
 
@@ -74,4 +74,6 @@ tags: Python getpass
 > `if...else...`
 >
 > `while...else... #当条件为真则执行while下面的语句，当条件为假则执行else下面的语句`
+
+
 

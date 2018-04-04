@@ -1,7 +1,7 @@
 ---
 layout: post
-title:Python Learning 1
-key:20180404
+title: Python Learning 1
+key: 20180404
 tags: Python getpass
 ---
 

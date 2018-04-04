@@ -1,10 +1,9 @@
-layout:post
+---
+layout: post
 title:Python Learning 1
 key:2018040401
-tags:
-  - Python
-  - getpass
-
+tags: Python getpass
+---
 
 若要生成可执行程序，必须声明解释器
 

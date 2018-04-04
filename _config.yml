@@ -11,7 +11,7 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
+text_color_theme: dark #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
@@ -77,6 +77,9 @@ gitalk:
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
+  app_id:5thHO3g8BFqCbs5zSkQgJFqs-gzGzoHsz
+  app_key:yFP8NgVnJsDtKLIJRVD39F5l
+  app_class:Counter
   # app_id:  #LeanCloud App id
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class

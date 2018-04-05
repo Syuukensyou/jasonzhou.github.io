@@ -45,7 +45,6 @@ timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_t
 author:
   name: Syuu Kensyou
   email: syuukensyou@qq.com
-  Wechat: syuukensyou
   # email:  #your Email address e.g. someone@site.com
   # facebook:  #your Facebook username
   # twitter:  #your Twitter username
@@ -83,7 +82,6 @@ gitalk:
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
-  enable:true
   app_id:5thHO3g8BFqCbs5zSkQgJFqs-gzGzoHsz
   app_key:yFP8NgVnJsDtKLIJRVD39F5l
   app_class:Counter
@@ -102,7 +100,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: html # text | html
+excerpt_type: text # text | html
 
 ## Sources ##
 # sources: bootcss #eg: bootcss | unpkg

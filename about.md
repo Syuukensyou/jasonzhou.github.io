@@ -8,11 +8,8 @@ titles:
 key: page-about
 ---
 
-Welcome to my blog! Chinese good boy~
-{% javascript %}
-window.open(“http://www.jb51.net“);
-{% %} :earth_asia: :earth_africa: :earth_americas:
-
+Welcome to my blog! Chinese good boy~ :earth_asia: :earth_africa: :earth_americas:
+<herf = "https://github.com/Syuukensyou">
 {% highlight javascript %}
 运动的起来像个胖子，静坐时就是个呆瓜
 

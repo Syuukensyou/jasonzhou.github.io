@@ -14,7 +14,7 @@
 text_color_theme: dark #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl: https://github.com/Syuukensyou
+baseurl: /
 title: Syuu Kensyou
 description: > #this means to ignore newlines until "nav_lists:"
   Syuu Kensyou's Blog
@@ -98,7 +98,7 @@ leancloud:
 # chart: true
 
 ## Paginate ##
-paginate: 3
+paginate: 7
 paginate_path: /blog/page:num
 
 ## Post excerpts ##

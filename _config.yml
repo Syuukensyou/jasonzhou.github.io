@@ -65,11 +65,12 @@ disqus:
 ## Comment system (gitalk) ##
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  clientID: 0281e20be529e331e6a3
-  clientSecret: b77a6d53213eafcf1adca1fd3dc4fc69956cf2ad
-  repository: syuukensyou.github.io
-  owner: Syuukensyou
-  admin: Syuukensyou
+  #clientID: 0281e20be529e331e6a3
+  #clientSecret: b77a6d53213eafcf1adca1fd3dc4fc69956cf2ad
+  #repository: syuukensyou.github.io
+  #owner: Syuukensyou
+  #admin: Syuukensyou
+  
   # clientID:  #Github Application Client ID
   # clientSecret:  #Github Application Client Secret
   # repository:  #Github repo

@@ -68,22 +68,18 @@ modify_date: 2018-04-05
 >
 > `str`和`bytes`：
 >
-> >- `bytes` -> `str`：
-> >
-> >
-> >```python
-> >b'\xe2'.decode(encoding='utf-8') #必须是能用编码方式节码的二进制
-> >```
-> >
-> >- `str` -> `bytes`：
-> >
-> >```python
-> >'str'.encode(encoding='utf-8')
-> >#若全是英文，如str用utf-8编码后仅仅为b'str'
-> >#若不是英文，则转成二进制
-> >#默认编码方式为utf-8
-> >#socket编程传输数据必须是二进制
-> >```
+> ```python
+> ##bytes --> str
+> b'\xe2'.decode(encoding='utf-8') #必须是能用编码方式节码的二进制
+>
+> ##str --> bytes
+> #若全是英文，如str用utf-8编码后仅仅为b'str'
+> #若不是英文，则转成二进制
+> #默认编码方式为utf-8
+> #socket编程传输数据必须是二进制
+> 'str'.encode(encoding='utf-8')
+> ```
+>
 
 
 

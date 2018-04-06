@@ -71,7 +71,7 @@ modify_date: 2018-04-05
 > >  > - 若不是英文，则转成二进制
 > >  > - 默认编码方式为`utf-8`
 > >
-> >![str-bytes](..\_posts_pic\str-bytes.png)
+> >![str-bytes](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/str-bytes.png)
 
 
 

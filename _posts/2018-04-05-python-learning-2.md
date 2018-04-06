@@ -9,21 +9,23 @@ modify_date: 2018-04-05
 
 > 1. `sys`
 >
->    > `sys.path`：Python使用的库存放在路径之一中，即环境变量
->    >
->    > `sys.avgr`：打印脚本的相对路径
->    >
->    > - `sys.avgr[i]`：可以取位置（从0开始）为i的输入参数
+>    ```python
+>    sys.path #Python使用的库存放在路径之一中，即环境变量
+>
+>    sys.avgr #打印脚本的相对路径
+>    sys.avgr[i] #可以取位置（从0开始）为i的输入参数
+>    ```
 >
 > 2. `os`（...为系统相关命令）
 >
->    > `os.system("...")`：执行系统命令，命令返回值为0即成功，不保存结果
->    >
->    > `os.popen("...")`：执行系统命令，命令返回值为内存地址
->    >
->    > - `os.popen("...").read()`：读取内容，保存命令执行结果
->    >
->    > `os.mkdir("...")`：创建新目录
+>    ```python
+>    os.system("...") #执行系统命令，命令返回值为0即成功，不保存结果
+>
+>    os.popen("...") #执行系统命令，命令返回值为内存地址
+>    os.popen("...").read() #读取内容，保存命令执行结果
+>
+>    os.mkdir("...") #创建新目录
+>    ```
 
 
 
@@ -53,32 +55,43 @@ modify_date: 2018-04-05
 
 #### 注意点：
 
-> 三元运算：`res = val1 if condition else val2`
+> 三元运算：
 >
-> > - `condition == True`->`res = val1`
-> > - `condition == False`->`res = val2`
+> ```python
+> res = val1 if condition else val2
+> #相当于：
+> if codition:
+>     res = val1
+> else:
+>     res = val2
+> ```
 >
 > `str`和`bytes`：
 >
-> >- `bytes` -> `str`：`b'\xe2'.decode(encoding='utf-8')`
+> >- `bytes` -> `str`：
 > >
-> >  > 必须是能用编码方式节码的二进制
 > >
-> >- `str` -> `bytes`：`'str'.encode(encoding='utf-8')` 
+> >```python
+> >b'\xe2'.decode(encoding='utf-8') #必须是能用编码方式节码的二进制
+> >```
 > >
-> >  > - socket编程传输数据必须是二进制
-> >  > - 若全是英文，如`str`用`utf-8`编码后仅仅为`b'str'`
-> >  > - 若不是英文，则转成二进制
-> >  > - 默认编码方式为`utf-8`
+> >- `str` -> `bytes`：
 > >
-> >![str-bytes](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/str-bytes.png)
+> >```python
+> >'str'.encode(encoding='utf-8')
+> >#若全是英文，如str用utf-8编码后仅仅为b'str'
+> >#若不是英文，则转成二进制
+> >#默认编码方式为utf-8
+> >#socket编程传输数据必须是二进制
+> >```
 
 
 
 #### 列表`list`：
 
-> - `name = ["A", "B", "C", "D"]`
->
+> ```python
+> name = ["A", "B", "C", "D"]
+> ```
 >
 > - 访问：
 >
@@ -131,9 +144,12 @@ modify_date: 2018-04-05
 >
 > - 浅复制(name2是对name的引用，只复制一层)：（可以用于创造联合账号）
 >
->   > - `name2 = name[:]`
->   > - `name2 = list(name)`
->   > - `name2 = copy.copy() #使用copy库`
+>   ```python
+>   name2 = name[:] #1
+>   name2 = list(name) #2
+>   import copy
+>   name2 = copy.copy() #3
+>   ```
 >
 > - 深复制：`copy.deepcopy() #使用copy库`
 >
@@ -141,19 +157,16 @@ modify_date: 2018-04-05
 >
 >   > 以元组形式返回数据中的索引和值
 >   >
->   > `ex:`
+>   > ```python
+>   > A = ['a', 'b', 'c']
+>   > for i in enumerate(A): 
+>   >     print(i)
 >   >
->   > > `A = ['a', 'b', 'c']`
->   > >
->   > > `for i in enumerate(A): print(i)`
->   > >
->   > > 运行结果:
->   > >
->   > > > (0, 'a')
->   > > >
->   > > > (1, 'b')
->   > > >
->   > > > (2, 'c')
+>   > #运行结果：
+>   > (0, 'a')
+>   > (1, 'b')
+>   > (2, 'c')
+>   > ```
 >
 > - `len`：
 >
@@ -240,15 +253,13 @@ modify_date: 2018-04-05
 >
 > - `maketrans()`：
 >
->   > `ex`：
->   >
->   > > `p = str.maketrans('abcdefg ','12345671')`
->   > >
->   > > `'This is a string!'.translate(p)`
->   > >
->   > > `output`:`Thislisl1lstrin7!`
->   > >
->   > > 注：按照p的格式转换字符串
+>   ```python
+>   p = str.maketrans('abcdefg ','12345671')
+>   'This is a string!'.translate(p) #按照p的格式转换字符串
+>
+>   #运行结果:
+>   Thislisl1lstrin7!
+>   ```
 >
 > - `replace(old,new,count)`：以`new`替换`old`，替换个数为前`count`个
 >
@@ -269,42 +280,62 @@ modify_date: 2018-04-05
 > >
 > > - 无序，无下标，以`key`查找
 >
-> 方法`d = {1:'a', 2:'b', 3:'c'}`：
+> 方法：
 >
-> > - 查：
-> >
-> >   > `d[2] #key值若存在则正常，若不存在则报KeyError`
-> >   >
-> >   > `d.get(2) #key只存在则输出value值，若没有输出NULL`
-> >
-> > - 改：`d[2] = 'd'`
-> >
-> >
-> > - 添加：`d[4] = 'e'`
-> >
-> >
-> > - 删除：
-> >
-> >   > `del d[3]`
-> >   >
-> >   > `d.pop(2) #必须有key值不然删除不了`
-> >   >
-> >   > `d.popitem() #随机删除一个key-value，不推荐`
-> >
-> >
-> > - 判断是否存在：`2 in d #返回bool值`
-> > - 打印所有的`value`：`d.values()`
-> > - 打印所有的`key`：`d.keys()`
-> > - `setdefault(key, value)`：先在字典中查找`key`，若存在则返回`value`，否则将`key-value`插入到字典中。返回值为`value`
-> > - `d1.update(d2)`：用`d2`去更新`d1`。若`d2`中的`key`在`d1`中存在，则用`d2`中的`value`更新`d1`；若`d2`中的`key-value`在`d1`中没有，则增加该键值对
-> > - `items()`：返回`dict_item`，内部是一个列表，列表的元素是元组，元组是`key-value`
-> > - `dict.fromkeys([1,2,3],item)`：初始化一个列表，浅复制
+> ```python
+> d = {1:'a', 2:'b', 3:'c'}
+>
+> ##查找
+> d[2] #key值若存在则正常，若不存在则报KeyError
+> d.get(2) #key只存在则输出value值，若没有输出NULL
+>
+> ##改
+> d[2] = 'd'
+>
+> ##添加
+> d[4] = 'e'
+>
+> ##删除
+> del d[3] #delete 1
+> d.pop(2) #delete 2 #必须有key值不然删除不了
+> d.popitem() #delete 3 #随机删除一个key-value，不推荐
+>
+> ##判断是否存在
+> print(2 in d) #返回bool值
+>
+> ##打印所有的values
+> print(d.values())
+>
+> ##打印所有的keys
+> print(d.keys())
+>
+> ##setdefault()
+> #先在字典中查找key，若存在则返回value，否则将key-value插入到字典中。返回值为value
+> dict.setdefault(key, value)
+>
+> ##update()
+> #用d2去更新d1。
+> #若d2中的key在d1中存在，则用d2中的value更新d1
+> #若d2中的key-value在d1中没有，则增加该键值对
+> d1.update(d2)
+>
+> ##items()
+> d.items() #返回dict_item，内部是一个列表，列表的元素是元组，元组是key-value
+>
+> ##formkeys()
+> dict.fromkeys([1,2,3],item) #用item初始化一个列表，浅复制
+> ```
 >
 > 循环：
 >
-> > `for i in dict_name: print(i, dict_name[i]) #推荐，快`
-> >
-> > `for k,v in dict_name.items(): print(k,v) #需将字典转成列表，再循环`
+> ```python
+> #推荐，快
+> for i in dict_name: 
+>     print(i, dict_name[i])
+> #需将字典转成列表，再循环
+> for k,v in dict_name.items(): 
+>     print(k,v) 
+> ```
 >
 > 字典嵌套
 

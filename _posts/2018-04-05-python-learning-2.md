@@ -1,8 +1,8 @@
 ---
 layout: post
 key: 20180405
-tags: Python list dict str
-modify_date: 2018-04-05
+tags: Python list dict tuple str
+modify_date: 2018-04-06 11:57
 ---
 
 #### 标准库：
@@ -184,86 +184,133 @@ modify_date: 2018-04-05
 
 #### 字符串`str`：
 
-> - `capitalize()`：首字母大写
+> ```python
+> string = 'This is a Test string!'
 >
+> ###capitalize()
+> #字符串第一个单词首字母大写，其他全小写
+> string.capitalize() #>>>'This is a test string!'
 >
-> - `count(sub, int_s, int_e)`：从位置`int_s`到位置`int_e`(顾头不顾尾)查找串`sub`，默认从头找到尾
+> ###count(sub, int_s, int_e)
+> #从位置int_s到位置int_e(顾头不顾尾)查找串sub，默认从头找到尾
+> string.count('is', 0, -1) #>>>2
 >
-> - `center(int_num, one_charater)`：一共打印`int_num`个字符，把字符串放在中间，不够的用**一个字符**`one_charater`来填满
+> ###center(int_n, one_ch)
+> #一共有int_n个字符，把字符串放在中间，不够的用一个字符one_ch来填满
+> string.center(31,'*') #>>>'****This is a Test string!****'
 >
-> - `endswith(sub, int_s, int_e)`：从位置`int_s`到位置`int_e`(顾头不顾尾)判断该字符串是否以串`sub`结尾，返回`bool`值
+> ###endswith(sub, int_s, int_e)
+> #从位置int_s到位置int_e(顾头不顾尾)判断该字符串是否以串sub结尾，返回bool值
+> string.endswith('is', 3, 7) #>>>True
 >
-> - `startswith(sub, int_s, int_e)`：从位置`int_s`到位置`int_e`(顾头不顾尾)判断该字符串是否以串`sub`开始，返回`bool`值
+> ###startswith(sub, int_s, int_e)
+> #从位置int_s到位置int_e(顾头不顾尾)判断该字符串是否以串sub开始，返回bool值
+> string.startswith('T',11,15) #>>>False
 >
-> - `expandtabs(tabsize)`：把字符串中的`\t`转换成`tabsize`个空格
+> ###expandtabs(tabsize)
+> #把字符串中的\t转换成tabsize个空格
+> 'This\tis\ta\ttest\tstring\t'.expandtabs(1) #>>>'This is a test string '
 >
-> - `find(sub)`：返回从左数第一个串`sub`在字符串中位置(从0开始计数)
+> ###find(sub)
+> #返回从左数第一个串sub在字符串中位置(从0开始计数)
+> string.find('is') #>>>2
 >
-> - `rfind(sub)`：返回从右数第一个串`sub`在字符串中位置(从0开始计数)
+> ###rfind(sub)
+> #返回从右数第一个串sub在字符串中位置(从0开始计数)
+> string.rfind('is') #>>>5
 >
-> - `format()`与`format_map()`：自我探索吧~
+> ###format()
+> ###format_map()
+> #格式化字符串
+> 'my name is {name}'.format(name='Jason') #>>>'my name is Jason'
+> myname={'name1':'jason','name2':'syuu'}
+> print('my name is {name2}'.format_map(myname)) #>>>'my name is jason'
 >
-> - `isalnum()`：判断字符串是否为阿拉伯数字，返回`bool`值
+> ###isalnum()
+> #判断字符串是否为阿拉伯字母（英文字母和数字），返回bool值
 >
-> - `isalpha()`：判断字符串是否为纯英文字符串，返回`bool`值
+> ###isalpha()
+> #判断字符串是否为纯英文字符串，返回bool值
 >
-> - `isdecimal()`：判断字符串是否是十进制，返回`bool`值
+> ###isdecimal()
+> #判断字符串是否是十进制整数，返回bool值
 >
-> - `isdigit()`：判断字符串是否是整数，返回`bool`值
+> ###isdigit()
+> #判断字符串是否是整数，返回bool值
 >
-> - `isidentifier()`：判断字符串是否是一个合法的**标识符**，返回`bool`值
+> ###isidentifier()
+> #判断字符串是否是一个合法的标识符，返回bool值
 >
-> - `islower()`：判断字符串是否是小写，返回`bool`值
+> ###islower()
+> #判断字符串是否是小写，返回bool值
 >
-> - `isnumeric()`：判断字符串是否是只有数字，返回`bool`值
+> ###isnumeric()
+> #判断字符串是否是只有数字，返回bool值(有小数点都不可以)
 >
-> - `isdecimal()`：判断字符串是否是十进制，返回`bool`值
+> ###isspace()
+> #判断字符串是否是空格，返回bool值
 >
-> - `isspace()`：判断字符串是否是空格，返回`bool`值
+> ###istitle()
+> #判断字符串中每个单词首字母是否大写，返回bool值
 >
-> - `istitle()`：判断每个单词首字母是否大写，返回`bool`值
+> ###title()
+> #把字符串中每个单词的首字母变成大写，返回str
 >
-> - `title()`：把每个单词的首字母变成大写，返回`str`
+> ###isprintable()
+> #判断字符串是否可以打印，返回bool值
 >
-> - `isprintable()`：判断字符串是否可以打印，返回`bool`值
+> ###isupper()
+> #判断字符串是否是大写，返回bool值
 >
-> - `isupper()`：判断字符串是否是大写，返回`bool`值
+> ###join(iterable)
+> #将iterable中的迭代值以字符串隔开，返回值为str值
+> '-+'.join(['1', '2', '3']) #>>>'1-+2-+3'
 >
-> - `join(iterable)`：将`iterable`中的迭代值以字符串隔开，返回值为`str`值
+> ###ljust(int_n, one_ch)
+> #一共int_n个字符，字符串左对齐，右边不足补one_ch
 >
-> - `ljust(int_n, one_ch)`：打印`int_n`个字符，字符串左对齐，右边不足补`one_ch`
+> ###rjust(int_n, one_ch)
+> #一共int_n个字符，字符串右对齐，左边不足补one_ch
 >
-> - `rjust(int_n, one_ch)`：打印`int_n`个字符，字符串右对齐，左边不足补`one_ch`
+> ###lower()
+> #把字符串中的大写变成小写
 >
-> - `lower()`：把字符串中的大写变成小写
+> ###upper()
+> #把小写变成大写
 >
-> - `upper()`：把小写变成大写
+> ###swapcase()
+> #大写变小写，小写变大写
 >
-> - `swapcase()`：大写变小写，小写变大写
+> ###lstrip()
+> #去掉字符串左边的回车和空格
 >
-> - `lstrip()`：去掉字符串左边的回车和空格
+> ###rstrip()
+> #去掉字符串右边的回车和空格
 >
-> - `rstrip()`：去掉字符串右边的回车和空格
+> ###strip()
+> #去掉字符串两边的回车和空格
 >
-> - `strip()`：去掉字符串两边的回车和空格
+> ###replace(old,new,count)
+> #以new替换old，替换个数为前count个
+>
+> ###split(sub, max_n)
+> #以串sub分割字符串，分割次数最大为max_n，当然串sub在分割后不会出现了，返回list
+>
+> ###splitlines()
+> #自动以换行分割，在linux和windows换行(\n \r\n)不一样，自动识别
+>
+> ###zfill(int_n)
+> #将字符串右对齐，左边不够以0（zero）填充
+> ```
 >
 > - `maketrans()`：
 >
 >   ```python
 >   p = str.maketrans('abcdefg ','12345671')
 >   'This is a string!'.translate(p) #按照p的格式转换字符串
->
->   #运行结果:
->   Thislisl1lstrin7!
+>   #>>>Thislisl1lstrin7!
 >   ```
 >
-> - `replace(old,new,count)`：以`new`替换`old`，替换个数为前`count`个
->
-> - `split(sub, max_n)`：以串`sub`分割字符串，分割次数最大为`max_n`，当然串`sub`在分割后不会出现了，返回`list`
->
-> - `splitlines()`：自动以换行分割，在`linux`和`windows`换行(`\n` `\r\n`)不一样，自动识别
->
-> - `zfill(int_n)`：将字符串右对齐，左边不够以`0`（zero）填充
 
 
 

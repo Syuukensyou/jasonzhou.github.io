@@ -15,11 +15,11 @@ modify_date: 2018-04-05
 
 变量：
 
-> `name1 = "A" #name1指向A`
->
-> `name2 = name1 #name2指向name1指向的地址，即指向A`
->
-> `name1 = "C" #name1指向C，而name2还是指向A`
+> ```python
+> name1 = "A" #name1指向A
+> name2 = name1 #name2指向name1指向的地址，即指向A
+> name1 = "C" #name1指向C，而name2还是指向A
+> ```
 >
 > 小写加下划线命名
 
@@ -47,37 +47,59 @@ modify_date: 2018-04-05
 
 输入：
 
-> `name = input("input a name")`
+> ```python
+> name = input("input a name")
+> ```
 >
-> 强制转换：`age = int(input("age:"))`
+> 强制转换：
+>
+> ```python
+> age = int(input("age:"))
+> ```
 >
 > 判断输入：`name.isdigit()`，返回`bool`值（相似的还有很多...有待尝试）
 
 格式化输出：
 
-> `print("info of %s: name: %s, age: %d" % (name, name, age))`
+> ```python
+> print("info of %s: name: %s, age: %d" % (name, name, age))
+> print("info of {_name}: name: {_name}, age:{_age}".format(_name=name, _age=age))
+> print("info of {0}: name: {0}, age:{1}".format(name, age)) #不推荐
+> ```
 >
-> `print("info of {_name}: name: {_name}, age:{_age}".format(_name=name, _age=age))`
+> 有颜色的输出：
 >
-> `print("info of {0}: name: {0}, age:{1}".format(name, age)) #不推荐`
->
-> 有颜色的输出：`print("\033[31;1m这是红色字体\033[0m") #31为红色字体，32为绿色字体，41为红色背景..`
+> ```python
+> print("\033[31;1m这是红色字体\033[0m") #31为红色字体，32为绿色字体，41为红色背景..
+> ```
 
 
 
 密文(pycharm不好使，dos可以)：
 
-> `import getpass`
->
-> `passwd = getpass.getpass("password:")`
+> ```python
+> import getpass
+> passwd = getpass.getpass("password:")
+> ```
 
 
 
 条件：
 
-> `if...else...`
->
-> `while...else... #当条件为真则执行while下面的语句，当条件为假则执行else下面的语句`
+> ```python
+> ##if...else...
+> if condition:
+>     ...
+> else:
+>     ...
+>     
+> ##while...else...
+> #当条件为真则执行while下面的语句，当条件为假则执行else下面的语句
+> while condition:
+>     ...
+> else:
+>     ... 
+> ```
 
 
 

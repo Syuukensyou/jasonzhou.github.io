@@ -71,7 +71,7 @@ modify_date: 2018-04-05
 > >  > - 若不是英文，则转成二进制
 > >  > - 默认编码方式为`utf-8`
 > >
-> >![str-bytes](F:\Github\LearnPython\str-bytes.png)
+> >![str-bytes](..\_posts_pic\str-bytes.png)
 
 
 

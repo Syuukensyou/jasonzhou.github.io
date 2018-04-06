@@ -2,7 +2,7 @@
 layout: post
 key: 20180405
 tags: Python list dict tuple str
-modify_date: 2018-04-06 11:57
+modify_date: 2018-04-06
 ---
 
 #### 标准库：
@@ -87,67 +87,66 @@ modify_date: 2018-04-06 11:57
 
 > ```python
 > name = ["A", "B", "C", "D"]
+>
+> ###访问
+> name[i-1] #第i个(从1开始计数)元素
+> name[-1] #倒数第一个
+> name[-2] #倒数第二个以此类推
+>
+> ###切片
+> name[0:n] #method 1 取前n个
+> name[:n] #method 2 取前n个
+> name[i-1:j] #顾头不顾尾，取第i个到第j个(从1开始计数)
+> name[-m:] #取最后面m个
+> name[i:j:m] #以m为步长切片
+>
+> ###插入
+> #无批量插入方法
+> name.append("E") #追加
+> name.insert(i-1, "F") #插入到第i个(从1开始计数)位置
+>
+> ###修改
+> name[i-1] = "G" #修改第i个(从1开始计数)
+>
+> ###删除
+> name.remove("A") #以内容删除，删除从左向右找到的第一个内容为'A'的数据
+> del name[i-1] #以下标删除第i个元素(从1开始计数)
+> name.pop(i) #以下标删除并返回第i个元素(从1开始计数)，默认参数为最后一个
+>
+> ###查找
+> name.index("B") #以内容查找并返回索引
+>
+> ###统计
+> name.count("C") #以内容统计重复个数
+>
+> ###清空列表
+> name.clear()
+>
+> ###删除列表
+> del name
+>
+> ###反转列表
+> name.reverse()
+>
+> ###排序
+> name.sort() #以ACSII排序
+>
+> ###扩展
+> name.extend(name2) #name2也是一个列表，追加到name的末尾
+>
+> ###浅复制(name2是对name的引用，只复制一层)
+> name2 = name[:] #method 1
+> name2 = list(name) #method 2
+> import copy
+> name2 = copy.copy(name) #method 3
+>
+> ###深复制
+> import copy
+> name2 = copy.deepcopy(name) #使用copy库
+>
+> ###列表长度
+> len(name)
 > ```
->
-> - 访问：
->
->   > - 第i个(从1开始计数)元素：`name[i-1]`
->   > - 倒数第一个：`name[-1]`
->   > - 倒数第二个：`name[-2]`#以此类推
->
->
-> - **切片**：
->
->   > - 取前n个：`name[0:n]`或是`name[:n]`
->   > - 取第i个到第j个(从1开始计数)：`name[i-1:j]`（顾头不顾尾）
->   > - 取最后面m个：`name[-m:]`
->   > - 有步长的切片：`name[i:j:m] #以m为步长切片`
->
->
-> - 插入：
->
->   > 追加：`name.append("E")`
->   >
->   > 插入第i个(从1开始计数)位置：`name.insert(i-1, "F")`
->   >
->   > **不能批量插入**
->
->
-> - 修改：第i个(从1开始)`name[i-1] = "G"`
->
-> - 删除：
->
->   > 以内容删除：`name.remove("A")`
->   >
->   > 以下标删除第i个元素(从1开始计数)：`del name[i-1]`
->   >
->   > 以下标返回删除并**返回**第i个元素(从1开始计数)：`name.pop(i)`
->
-> - 查找(以内容查找并返回索引)：`name.index("B")`
->
-> - 统计(以内容统计重复个数)：`name.count("C")`
->
-> - 清空列表：`name.clear()`
->
-> - 删除列表：`del name`
->
-> - 反转：`name.reverse()`
->
-> - 排序(以`ACSII`排序)：`name.sort()` 
->
-> - 扩展：`name.extend(name2) #name2也是一个列表，追加到name的末尾`
->
->
-> - 浅复制(name2是对name的引用，只复制一层)：（可以用于创造联合账号）
->
->   ```python
->   name2 = name[:] #1
->   name2 = list(name) #2
->   import copy
->   name2 = copy.copy() #3
->   ```
->
-> - 深复制：`copy.deepcopy() #使用copy库`
 >
 > - `enumerate`：
 >
@@ -164,9 +163,6 @@ modify_date: 2018-04-06 11:57
 >   > (2, 'c')
 >   > ```
 >
-> - `len`：
->
->   > 返回列表长度：`len(name)`
 
 
 

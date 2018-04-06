@@ -2,6 +2,7 @@
 layout: post
 key: 20180404
 tags: Python getpass
+modify_date: 2018-04-05
 ---
 
 若要生成可执行程序，必须声明解释器
@@ -49,6 +50,8 @@ tags: Python getpass
 > `name = input("input a name")`
 >
 > 强制转换：`age = int(input("age:"))`
+>
+> 判断输入：`name.isdigit()`，返回`bool`值（相似的还有很多...有待尝试）
 
 格式化输出：
 
@@ -57,6 +60,8 @@ tags: Python getpass
 > `print("info of {_name}: name: {_name}, age:{_age}".format(_name=name, _age=age))`
 >
 > `print("info of {0}: name: {0}, age:{1}".format(name, age)) #不推荐`
+>
+> 有颜色的输出：`print("\033[31;1m这是红色字体\033[0m") #31为红色字体，32为绿色字体，41为红色背景..`
 
 
 

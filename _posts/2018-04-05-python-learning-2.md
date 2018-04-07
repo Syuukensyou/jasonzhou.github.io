@@ -1,7 +1,8 @@
 ---
 layout: post
 key: 20180405
-tags: Python list dict tuple str
+title: 关于列表、字典、元组和字符串
+tags: Python list dict tuple str bytes
 modify_date: 2018-04-06
 ---
 
@@ -75,7 +76,7 @@ modify_date: 2018-04-06
 > ##str --> bytes
 > #若全是英文，如str用utf-8编码后仅仅为b'str'
 > #若不是英文，则转成二进制
-> #默认编码方式为utf-8
+> ##########################Python默认编码方式为Unicode，要转成字节必须转成utf-8
 > #socket编程传输数据必须是二进制
 > 'str'.encode(encoding='utf-8')
 > ```

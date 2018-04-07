@@ -1,8 +1,9 @@
 ---
 layout: post
 key: 20180404
-tags: Python getpass
-modify_date: 2018-04-05
+title: 关于变量、常量和输入输出
+tags: Python getpass variable input output
+modify_date: 2018-04-06
 ---
 
 若要生成可执行程序，必须声明解释器

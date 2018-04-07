@@ -1,7 +1,7 @@
 ---
 layout: post
 key: 20180406
-tags: Python set file decode encode
+tags: Python set file decode encode function
 ---
 
 #### 集合`set`
@@ -211,3 +211,85 @@ tags: Python set file decode encode
 >#将Unicode编码后转成二进制了
 >'nihao你好'.encode('gbk') #>>>b'nihao\xc4\xe3\xba\xc3'
 >```
+
+#### 函数
+
+> 特点：参数+文档+返回值
+>
+> > - 代码重复利用
+> > - 可扩展
+> > - 保持一致性
+>
+> 返回值：
+>
+> > - 返回值数=0：返回`None`
+> > - 返回指数=1：返回`object`
+> > - 返回指数>1：返回`tuple`
+>
+> 函数调用的参数：
+>
+> > - **位置参数**和**关键参数**：关键参数调用不能写在位置参数前面`test(3,z=2,y=4)`
+> >
+> > - **默认参数**：
+> >
+> > - **参数组**：当实参个数不固定时，将形参定义为`*args`
+> >
+> >   ```python
+> >   ###把多个不固定的位置实参转换成元组的方式传入形参
+> >   def test(*args):
+> >       print(args)
+> >   test(1,2,3,4,5) #>>>(1,2,3,4,5)
+> >   test([1,2,3,4,5]) #>>>([1,2,3,4,5],)
+> >   test(*[1,2,3,4]) #>>>(1,2,3,4)
+> >
+> >   ###把多个不固定的关键字实参转换成字典的方式传入形参
+> >   def test_dict(**kwargs):
+> >       print(kwargs)
+> >   test_dict(name='A',age=2,sex='N') #>>>{'name':'A','age':2,'sex':'N'}
+> >   test_dict(**{name='A',age=2,sex='N'}) #>>>{'name':'A','age':2,'sex':'N'}
+> >
+> >   ###组合
+> >   def test_1(name,age=12,**kwargs):
+> >       print(name,age,kwargs)
+> >   test_2('A',age=2,sex='N') #>>>A2{sex':'N'}
+> >   test_2('A',2,sex='N') #>>>A2{sex':'N'}
+> >   test_2('A',sex='N',age=3) #>>>A3{sex':'N'}
+> >   test_2('A',2,sex='N',age=3) #出错，age有两个实参传入
+> >
+> >   def test_3(name,age=12,*args,**kwargs):
+> >       print(name,age,args,kwargs)
+> >   test_3('A',age=2,sex='N') #>>>A2(){sex':'N'}
+> >   ```
+>
+> 局部变量：
+>
+> > 整数和字符串在局部修改后不影响全局，而复杂的数据结构在局部修改后会影响全局
+> >
+> > ```python
+> > global var_name #若没有全局变量则创建一个，有则使用全局变量---->不推荐
+> > ```
+>
+> 递归：最大递归深度999次
+>
+> ```python
+> del calc(n):
+>     print(n)
+>     if int(n/2) > 0:
+>         return calc(int(n/2))
+>     print("-->",n)
+> calc(10) #10 5 2 1 -->1
+> ```
+>
+> 函数式编程：`lisp`、`hashshell`、`erlang`
+>
+> 高阶函数：一个函数的参数可以是函数
+>
+> ```python
+> def add(a,b,f):
+>     return f(a)+f(b)
+> res = add(3,-6,abs) #>>>9
+> ```
+
+#### 过程
+
+> 特点：没有返回值的函数，Python中隐式赋予其返回值为`None`

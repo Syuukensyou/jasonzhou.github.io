@@ -1,7 +1,6 @@
 ---
 layout: post
 key: 20180405
-title: 关于列表、字典、元组和字符串
 tags: Python list dict tuple str bytes
 modify_date: 2018-04-06
 ---

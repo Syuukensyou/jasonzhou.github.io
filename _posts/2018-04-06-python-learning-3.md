@@ -1,7 +1,6 @@
 ---
 layout: post
 key: 20180406
-title: 关于集合、文件和编码解码
 tags: Python set file decode encode
 ---
 

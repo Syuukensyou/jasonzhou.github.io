@@ -1,7 +1,6 @@
 ---
 layout: post
 key: 20180404
-title: 关于变量、常量和输入输出
 tags: Python getpass variable input output
 modify_date: 2018-04-06
 ---

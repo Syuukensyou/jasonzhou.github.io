@@ -272,7 +272,7 @@ tags: Python set file decode encode function
 > 递归：最大递归深度999次
 >
 > ```python
-> del calc(n):
+> def calc(n):
 >     print(n)
 >     if int(n/2) > 0:
 >         return calc(int(n/2))

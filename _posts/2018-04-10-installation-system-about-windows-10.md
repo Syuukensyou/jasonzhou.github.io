@@ -1,3 +1,11 @@
+---
+layout: post
+key: 20180410
+tags: install-win10
+---
+
+
+
 1. 制作启动盘。
 
 2. 以下有两种方式安装系统：一种硬盘格式是MBR，一种硬盘格式是GPT。
@@ -5,13 +13,13 @@
 3. 硬盘格式化可以使用Windows自带的diskpart。
 
    ```markdown
-   >>>diskpart
-   >>>list disk
-   >>>select disk[=n]
-   >>>clean ;此步会格式化所选硬盘的所有数据！！！切记备份！！！
-   >>>convert mbr ;将所选硬盘格式化为MBR格式
+   >>diskpart
+   >>list disk
+   >>select disk[=n]
+   >>clean ;此步会格式化所选硬盘的所有数据！！！切记备份！！！
+   >>convert mbr ;将所选硬盘格式化为MBR格式
    or:
-   >>>convert gpt ;将所选硬盘格式化为GPT格式--->推荐
+   >>convert gpt ;将所选硬盘格式化为GPT格式--->推荐
    ```
 
 4. 关于UEFI/Legacy和Boot security的选择：

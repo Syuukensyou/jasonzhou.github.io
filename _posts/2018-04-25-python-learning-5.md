@@ -1,6 +1,6 @@
 ---
 layout: post
-key:20180425
+key: 20180425
 tags: generator Iterable Iterator
 ---
 

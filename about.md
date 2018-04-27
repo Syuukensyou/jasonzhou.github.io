@@ -8,21 +8,15 @@ titles:
 key: page-about
 ---
 
-Welcome to my blog! Chinese good boy~ :earth_asia: :earth_africa: :earth_americas:
-
-This is my [Github](https://github.com/Syuukensyou).
+Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
 
 {% highlight javascript %}
-运动的起来像个胖子，静坐时就是个呆瓜
-
-码得了代码，烧得了两个菜，玩得了篮球，也跑得动羽毛球
-
-我就是我，不喜欢舒适区
+(() => console.log('hello, world!'))();
 {% endhighlight %}
 
+## Skills
 
-
-## Loves
-
-- C, C++, Python, Java
-- SQL
+- HTML5, CSS3(SASS), JavaScript(ES2017, Node.js), Bash(Zsh)
+- React, React Native, Vue.js
+- gulp, webpack
+- Adobe Photoshop, Sketch

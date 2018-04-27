@@ -83,7 +83,7 @@ OOP：
 > >>
 > >>可以在内部访问，但不可在外部直接访问
 > >
-> >![类与实例](..\_posts_pic\class.png)
+> >![类与实例](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/class.png)
 >
 > 继承：
 >

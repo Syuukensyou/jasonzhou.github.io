@@ -1,7 +1,7 @@
 ---
 layout: post
 key: 2018042501
-tags: generator Iterable Iterator
+tags: Python generator Iterable Iterator
 ---
 
 列表生成器：

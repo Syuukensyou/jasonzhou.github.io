@@ -1,7 +1,7 @@
 ---
 layout: post
 keys: 20180426
-tags: python OOP Class Object Object-Oriented-Programming Encapsulation Inheritance Polymorphism
+tags: Python OOP Class Object Object-Oriented-Programming Encapsulation Inheritance Polymorphism
 ---
 
 OOP：

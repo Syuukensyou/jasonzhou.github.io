@@ -1,7 +1,7 @@
 ---
 layout: post
 key: 2018042502
-tags: python software-contents-structure
+tags: Python software-contents-structure
 ---
 
 软件目录结构：

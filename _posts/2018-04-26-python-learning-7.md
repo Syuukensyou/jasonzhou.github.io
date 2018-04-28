@@ -465,7 +465,9 @@ OOP：
 > >
 > >![metaclass](https://github.com/Syuukensyou/syuukensyou.github.io/tree/master/_posts_pic/metaclass.png)
 > >
-> >http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
+> >[metaclass]: http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
+> >
+> >
 > >
 > >- `getattr(object, name)`、`hasattr(object, name)`、`setattr(object, name)`、`delattr(object, name)`：查找实例object中是否有对应name字符串的方法、属性
 > >

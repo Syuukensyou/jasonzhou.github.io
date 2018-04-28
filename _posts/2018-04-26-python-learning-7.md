@@ -465,7 +465,7 @@ OOP：
 > >
 > >![metaclass](https://github.com/Syuukensyou/syuukensyou.github.io/tree/master/_posts_pic/metaclass.png)
 > >
-> >[metaclass]: http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
+> >`http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python`
 > >
 > >
 > >

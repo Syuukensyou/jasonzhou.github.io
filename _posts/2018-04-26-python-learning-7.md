@@ -2,7 +2,7 @@
 layout: post
 keys: 20180426
 tags: Python OOP Class Object
-modify_date: 2018-04-27
+modify_date: 2018-04-28
 ---
 
 OOP：
@@ -49,6 +49,7 @@ OOP：
 > >> r1.prove = True  # 向实例r1中添加属性prove，仅限r1
 > >> del r1.weapon  # 去除r1的属性weapon，仅限r1
 > >> ```
+> >> ![class](https://github.com/Syuukensyou/syuukensyou.github.io/tree/master/_posts_pic/class.png)
 > >
 > >
 > >
@@ -237,13 +238,13 @@ OOP：
 > >        print("%s has paid tution for $%s" % (self.name,amount) )
 > >
 > >
-> >school = School("老男孩IT","沙河")
+> >school = School("A","a")
 > >
-> >t1 = Teacher("Oldboy",56,"MF",200000,"Linux")
-> >t2 = Teacher("Alex",22,"M",3000,"PythonDevOps")
+> >t1 = Teacher("A1",56,"MF",200000,"Linux")
+> >t2 = Teacher("A2",22,"M",3000,"PythonDevOps")
 > >
-> >s1 = Student("ChenRonghua",36,"MF",1001,"PythonDevOps")
-> >s2 = Student("徐良伟",19,"M",1002,"Linux")
+> >s1 = Student("B1",36,"MF",1001,"PythonDevOps")
+> >s2 = Student("B2",19,"M",1002,"Linux")
 > >
 > >t1.tell()
 > >s1.tell()
@@ -269,12 +270,12 @@ OOP：
 > >
 > >```python
 > >class Animal:
-> >    def __init__(self, name):  # Constructor of the class
+> >    def __init__(self, name):
 > >        self.name = name
 > >
-> >    def talk(self):  # Abstract method, defined by convention only
-> >        pass  # raise NotImplementedError("Subclass must implement abstract method")
-> >
+> >    def talk(self):
+> >        pass
+> >    
 > >    @staticmethod
 > >    def animal_talk(obj):
 > >        obj.talk()
@@ -295,4 +296,201 @@ OOP：
 > >
 > >Animal.animal_talk(c)
 > >Animal.animal_talk(d)
+> >```
+>
+> 
+>
+> 类的方法：
+>
+> >**静态方法**:`@staticmethod`
+> >
+> >> 名义上归类管，就是正常的函数，实际上不能访问类或实例的任何属性；
+> >>
+> >> 需要通过类名来调用，参数不默认有`self`；
+> >
+> >**类方法**:`@classmethod`
+> >
+> >>只能访问类变量，不能访问实例变量；
+> >
+> >**属性方法**：`@property`
+> >
+> >>把一个方法变成一个静态属性；隐藏实现细节
+> >>
+> >>**不能传参数，不能赋值！**
+> >>
+> >>**正常属性是可以删除的，但是属性方法不能删除！**
+> >>
+> >>**注意：**想传参数，想赋值，想删除
+> >>
+> >>```python
+> >>class Dog(object):
+> >>    def __init__(self, name, __food):
+> >>        self.name = name
+> >>        self.__food = None
+> >>        
+> >>    @property
+> >>    def eat(self):
+> >>        print("%s is eating %s" % (self.name, self.__food))
+> >>        
+> >>    @eat.setter  # 修改
+> >>    def eat(self, food):
+> >>        self.__food = food
+> >>        print("set to food:", food)
+> >>        
+> >>    @eat.deleter  # 删除
+> >>    def eat(self):
+> >>        del eat.__food
+> >>        print("delete the eat")
+> >>        
+> >>d = Dog("A")
+> >>d.eat = "baozi"  # 调用属性方法的setter，直接赋值
+> >>d.eat  # 直接调用属性方法，因为不能通过函数调用方式
+> >>del d.eat  # 删除属性方法
+> >>```
+> >>
+> >>实例：航班查询
+> >>
+> >>```python
+> >>class Flight(object):
+> >>    def __init__(self,name):
+> >>        self.flight_name = name
+> >>
+> >>    def checking_status(self):
+> >>        print("checking flight %s status " % self.flight_name)
+> >>        return  0
+> >>
+> >>    @property
+> >>    def flight_status(self):
+> >>        status = self.checking_status()
+> >>        if status == 0 :
+> >>            print("flight got canceled...")
+> >>        elif status == 1 :
+> >>            print("flight is arrived...")
+> >>        elif status == 2:
+> >>            print("flight has departured already...")
+> >>        else:
+> >>            print("cannot confirm the flight status...,please check later")
+> >>    @flight_status.setter
+> >>    def flight_status(self,status):
+> >>        print("flight %s has changed status to %s" %(self.flight_name,status))
+> >>f = Flight("CA980")
+> >>f.flight_status  # 对用户隐藏实现细节
+> >>f.flight_status = 2
+> >>```
+> >
+> >
+> >
+> >- `__doc__`：获取类的说明信息
+> >
+> >- `__module__`：表示当前操作的对象是从哪个模块导入的
+> >
+> >- `__class__`：当前类本身
+> >
+> >- `__init__`
+> >
+> >- `__del__`
+> >
+> >- `__call__`：由对象直接触发的方法
+> >
+> >- `__dict__`：通过类调用--->所有属性和方法，不包括实例属性；通过实力调用--->所有实例属性，不包括类属性
+> >
+> >- `__str__`：获得实例的消息
+> >
+> >- `__getitem__`、`__setitem__`、`__delitem__`：字典，执行这个动作，动作内部的动作需要自己定义
+> >
+> >
+> >```python
+> >class Foo(object):
+> >    def __init__(self):
+> >        self.data = {}
+> >        
+> >    def __getitem__(self, key):
+> >        print('__getitem__', key)
+> >        return self.data.get(key)
+> >    
+> >    def __setitem__(self, key, value):
+> >        print('__setitem__', key, value)
+> >        self.data[key] =value
+> >    
+> >    def __delitem__(self, key):
+> >        print('__delitem__', key)
+> >
+> >obj = Foo()
+> >obj['name'] = "alex"
+> >del obj["sdfdsf"]
+> >```
+> >
+> >- `__new__`：用来创建实例的方法，通过new来调用init，实例化之前定制，先执行`__new__`再执行`__init__`；必须有返回值
+> >
+> >
+> >```python
+> >def func(self):
+> >    print('hello %s' %self.name)
+> >    
+> >def __init__(self,name,age):
+> >    self.name = name
+> >    self.age = age
+> >
+> ># 封住一个类，特殊方法创建类
+> >Foo = type('Foo',  # 类名
+> >           (object,),  # 继承父类
+> >           {'talk': func, '__init__':__init__}  # 包含的方法
+> >          )
+> >f = Foo("Chrn",22)
+> >f.talk()
+> >print(type(Foo))
+> >```
+> >
+> >```python
+> >class MyType(type):
+> >    def __init__(self, what, bases=None, dict=None):
+> >        print("--MyType init---")
+> >        super(MyType, self).__init__(what, bases, dict)
+> >
+> >    def __call__(self, *args, **kwargs):
+> >        print("--MyType call---")
+> >        obj = self.__new__(self, *args, **kwargs)
+> >        obj.data = {"name":111}
+> >        self.__init__(obj, *args, **kwargs)
+> >        
+> >class Foo(object):
+> >    def __init__(self, name):
+> >        self.name = name
+> >        print("Foo ---init__")
+> >
+> >    def __new__(cls, *args, **kwargs):
+> >        print("Foo --new--")
+> >        return object.__new__(cls) #继承父亲的__new__方法，cls相当于Foo
+> >```
+> >
+> >![metaclass](https://github.com/Syuukensyou/syuukensyou.github.io/tree/master/_posts_pic/metaclass.png)
+> >
+> >http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
+> >
+> >- `getattr(object, name)`、`hasattr(object, name)`、`setattr(object, name)`、`delattr(object, name)`：查找实例object中是否有对应name字符串的方法、属性
+> >
+> >```python
+> >def bulk(self):
+> >    print("%s is yelling...." % self.name)
+> >
+> >class Dog(object):
+> >    def __init__(self,name):
+> >        self.name = name
+> >
+> >    def eat(self,food):
+> >        print("%s is eating ... " % self.name,food)
+> >
+> >d = Dog("A")
+> >choice = input(">>:").strip()
+> >
+> >if hasattr(d,choice):  # 判断对象中是否有对应字符串的方法或属性
+> >    func = getattr(d,choice)  # 获取该方法至func中，便于传参
+> >    func("baozi")  # 通过func方法可以传入参数
+> >    #  equals：
+> >    #  getattr(d, choice)("baozi")
+> >else:
+> >    # 如果添加的是一个方法则可以调用，如果是一个属性则可直接获取
+> >    setattr(d,choice,bulk)  # d.talk = bulk(传入的choice是talk)
+> >    func = getattr(d, choice)
+> >    func(d)
 > >```

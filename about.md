@@ -10,11 +10,13 @@ key: page-about
 
 Welcome to SyuuKensyou's blog! :earth_asia: :earth_africa: :earth_americas:
 
---------------------------------------------------------------------------------------
+[Click to My Github](https://github.com/Syuukensyou)
+
+
 
 不食人间烟火几重天，偏居一隅安余生
 
-----------------------------------------------------------------------------------------
+
 
 ## Skills
 

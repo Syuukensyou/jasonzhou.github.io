@@ -4,6 +4,8 @@ key: 2018042502
 tags: Python software-contents-structure
 ---
 
+<!--more-->
+
 软件目录结构：
 
 > 优点：可读性高、可维护性高

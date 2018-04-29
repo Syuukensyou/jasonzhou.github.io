@@ -4,7 +4,7 @@ key: 20180410
 tags: install-win10
 ---
 
-
+<!--more-->
 
 1. 制作启动盘。
 

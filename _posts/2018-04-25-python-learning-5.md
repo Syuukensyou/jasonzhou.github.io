@@ -4,6 +4,8 @@ key: 2018042501
 tags: Python generator Iterable Iterator
 ---
 
+<!--more-->
+
 列表生成器：
 
 >```python

@@ -5,6 +5,8 @@ tags: Python getpass variable input output
 modify_date: 2018-04-06
 ---
 
+<!--more-->
+
 若要生成可执行程序，必须声明解释器
 
 > `#!usr/bin/env python`在系统中找python的环境变量

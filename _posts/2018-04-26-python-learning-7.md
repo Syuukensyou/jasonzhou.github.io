@@ -5,6 +5,8 @@ tags: Python OOP Class Object
 modify_date: 2018-04-28
 ---
 
+<!--more-->
+
 OOP：
 
 > 特性：

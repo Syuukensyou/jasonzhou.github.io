@@ -1,5 +1,6 @@
 ---
 layout: post
+comment: true
 key: 2018042502
 tags: Python software-contents-structure
 ---

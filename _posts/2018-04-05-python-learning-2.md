@@ -5,7 +5,7 @@ tags: Python list dict tuple str bytes
 modify_date: 2018-04-06
 ---
 
-<!--more-->
+
 
 #### 标准库：
 

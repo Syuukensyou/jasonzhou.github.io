@@ -4,7 +4,7 @@ key: 2018042502
 tags: Python software-contents-structure
 ---
 
-<!--more-->
+
 
 软件目录结构：
 

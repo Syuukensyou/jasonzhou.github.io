@@ -4,7 +4,7 @@ key: 20180406
 tags: Python set file decode encode function
 ---
 
-<!--more-->
+
 
 #### 集合`set`
 

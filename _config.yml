@@ -72,7 +72,7 @@ gitalk:
   clientSecret: b77a6d53213eafcf1adca1fd3dc4fc69956cf2ad
   repository: syuukensyou.github.io
   owner: Syuukensyou
-  admin: -Syuukensyou
+  admin: Syuukensyou
   # clientID:  #Github Application Client ID
   # clientSecret:  #Github Application Client Secret
   # repository:  #Github repo
@@ -92,10 +92,10 @@ leancloud:
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
 
-# mathjax: true
-# mathjax_autoNumber: true
-# mermaid: true
-# chart: true
+mathjax: true
+mathjax_autoNumber: true
+mermaid: true
+chart: true
 
 ## Paginate ##
 paginate: 7
@@ -103,7 +103,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text # text | html
+excerpt_type: html # text | html
 
 ## Sources ##
 # sources: bootcss #eg: bootcss | unpkg

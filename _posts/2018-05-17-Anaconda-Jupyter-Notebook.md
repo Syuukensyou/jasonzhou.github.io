@@ -1,6 +1,7 @@
 ---
 layout： post
-keys: 2018051701
+title: Anaconda Jupyter Notebook
+keys: 20180517
 tags: Windows Anaconda Jupyter-Notebook
 ---
 # <center>Win 10 Anaconda Jupyter Notebook一些操作</center>
@@ -20,7 +21,6 @@ tags: Windows Anaconda Jupyter-Notebook
 
 在`Anaconda Prompt`中转换：`ipython nbconvert --to file-type file-name.ipynb `
 
-> 其中`file-type`可以是`markdown`、`html`、`pdf`等等，详细参考：
+> 其中`file-type`可以是`markdown`、`html`、`pdf`等等，详细参考：https://ipython.org/ipython-doc/3/notebook/nbconvert.html
 >
-> [ipynb转换成其他格式文件]: https://ipython.org/ipython-doc/3/notebook/nbconvert.html
 

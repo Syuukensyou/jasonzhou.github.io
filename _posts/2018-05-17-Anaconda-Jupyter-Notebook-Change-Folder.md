@@ -1,10 +1,10 @@
 ---
 layout： post
 keys: 2018051701
-tags: Win10 Anaconda Jupyter-Notebook
+tags: Windows Anaconda Jupyter-Notebook
 ---
 
-# <center>修改Win10中Anaconda Jupyter Notebook中的默认启动位置</center>
+# <center>修改Windows 10中Anaconda Jupyter Notebook中的默认启动位置</center>
 
 ##1 临时更改启动位置
 

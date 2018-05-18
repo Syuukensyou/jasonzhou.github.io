@@ -1,8 +1,8 @@
 ---
 layout： post
-title: Anaconda Jupyter Notebook
 keys: 20180517
 tags: Windows Anaconda Jupyter-Notebook
+title: Anaconda Jupyter Notebook
 ---
 # <center>Win 10 Anaconda Jupyter Notebook一些操作</center>
 

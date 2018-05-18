@@ -61,8 +61,10 @@ app = MyApp()
 app.MainLoop()
 ```
 
-### **每个wxPython程序必须有一个application(应用程序)对象和至少一个frame(框架)对象。application对象必须是wx.App的一个实例 或 在OnInit()方法中定义的一个子类的一个实例，OnInit()方法被wx.App父类调用**
-#### 开发一个wxPython程序五个基本步骤：
+**每个wxPython程序必须有一个application(应用程序)对象和至少一个frame(框架)对象。application对象必须是wx.App的一个实例 或 在OnInit()方法中定义的一个子类的一个实例，OnInit()方法被wx.App父类调用**
+
+**开发一个wxPython程序五个基本步骤：**
+
 - 导入wxPython包
 - 子类化wxPython应用程序类
 - 定义一个应用程序的初始化方法
@@ -139,7 +141,7 @@ if __name__=='__main__':
 ```
 
 ## 3 wxPython程序稳固的基础
-### - 应用程序对象
+- **应用程序对象**
 > 管理主事件循环
 > 创建一个wx.App的子类
 >> - 1.定义这个子类，继承wx.App
@@ -150,7 +152,7 @@ if __name__=='__main__':
 >> 开始于实例创建，结束于最后一个应用程序被关闭时结束。与Python脚本的开始结束不一样。
 > 输出重定向sys.stdout，sys.stderr
 
-### - 顶级框架/窗口对象
+ - **顶级框架/窗口对象**
 > 管理重要的数据，控制并呈现
 > 创建窗口对象：`wx.Frame(parent, id=-1, title='', pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.DEFAULT_FRAME_STYLE, name='frame')`
 > 窗口ID（窗口内不可重复）
@@ -268,7 +270,7 @@ if __name__=='__main__':
 ```
 
 ### 3.3 对话框
-#### 有许多种类对话框，如下：
+**有许多种类对话框，如下：**
 > - 消息对话框
 > - 文本输入对话框
 > - 列表选择

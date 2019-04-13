@@ -13,12 +13,6 @@ title: Mac Export the PDF file from gitbook
 
 <figure> <a><img src="{{site.url}}/_posts_pic/2.png"></a> </figure>
 
-```text
-<figure>
-<a><img src="{{site.url}}/pics/branch.png"></a>
-</figure>
-```
-
 ## 2、安装gitbook
 
 ```
@@ -30,7 +24,7 @@ sudo npm install gitbook-cli -g
 
 （1）安装没有使用`sudo`命令
 
-![Screen Shot 2019-04-13 at 20.54.39]({{"/_posts_pic/2.png"|absolute_url}})
+![Screen Shot 2019-04-13 at 20.54.39]({{"/_posts_pic/2.png" | absolute_url}})
 
 （2）在上一次`npm`安装失败后没有强制清楚`cache`
 
@@ -39,7 +33,7 @@ sudo npm install gitbook-cli -g
 ╰─➤  npm cache clean --force
 ```
 
-![Screen Shot 2019-04-13 at 21.00.37]({{"/_posts_pic/3.png"|absolute_url}})
+![Screen Shot 2019-04-13 at 21.00.37]({{"/_posts_pic/3.png" | absolute_url}})
 
 （3）需要变换`.npm`的默认路径
 
@@ -92,7 +86,11 @@ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 
 进入所在书籍 —> `gitbook pdf` —> `npm install svgexport -g` —> `gitbook pdf`
 
+<<<<<<< HEAD
 ![Screen Shot 2019-04-13 at 21.19.06]()
+=======
+![Screen Shot 2019-04-13 at 21.19.06]({{"/_posts_pic/4.png" | absolute_url}})
+>>>>>>> f7331e71b82183baef6a4019932b081702cfe0a5
 
 
 

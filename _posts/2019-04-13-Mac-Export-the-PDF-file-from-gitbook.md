@@ -11,7 +11,7 @@ title: Mac Export the PDF file from gitbook
 
 建议选择LTS版本
 
-![Screen Shot 2019-04-13 at 20.49.40](../_posts_pic/1.png)
+![Screen Shot 2019-04-13 at 20.49.40](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/1.png)
 
 ## 2、安装gitbook
 
@@ -24,7 +24,7 @@ sudo npm install gitbook-cli -g
 
 （1）安装没有使用`sudo`命令
 
-![Screen Shot 2019-04-13 at 20.54.39](../_posts_pic/2.png)
+![Screen Shot 2019-04-13 at 20.54.39](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/2.png)
 
 （2）在上一次`npm`安装失败后没有强制清楚`cache`
 
@@ -33,7 +33,7 @@ sudo npm install gitbook-cli -g
 ╰─➤  npm cache clean --force
 ```
 
-![Screen Shot 2019-04-13 at 21.00.37](../_posts_pic/3.png)
+![Screen Shot 2019-04-13 at 21.00.37](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/3.png)
 
 （3）需要变换`.npm`的默认路径
 
@@ -86,7 +86,7 @@ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 
 进入所在书籍 —> `gitbook pdf` —> `npm install svgexport -g` —> `gitbook pdf`
 
-![Screen Shot 2019-04-13 at 21.19.06](../_posts_pic/4.png)
+![Screen Shot 2019-04-13 at 21.19.06](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/4.png)
 
 
 

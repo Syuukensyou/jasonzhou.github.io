@@ -51,7 +51,7 @@ OOP：
 > >> r1.prove = True  # 向实例r1中添加属性prove，仅限r1
 > >> del r1.weapon  # 去除r1的属性weapon，仅限r1
 > >> ```
-> >> ![class](https://github.com/Syuukensyou/syuukensyou.github.io/tree/master/_posts_pic/class.png)
+> >> ![class](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/class.png?raw=true)
 > >
 > >
 > >
@@ -486,7 +486,7 @@ OOP：
 > >        return object.__new__(cls) #继承父亲的__new__方法，cls相当于Foo
 > >```
 > >
-> >![metaclass](https://github.com/Syuukensyou/syuukensyou.github.io/tree/master/_posts_pic/metaclass.png)
+> >![metaclass](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/metaclass.png?raw=true)
 > >
 > >`http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python`
 > >

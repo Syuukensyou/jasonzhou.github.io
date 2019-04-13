@@ -72,7 +72,7 @@ Installing GitBook 3.2.3
 
 
 
-### 3、安装`calibre`软件
+## 3、安装`calibre`软件
 
 （1）拖入到Application即可
 
@@ -82,7 +82,7 @@ Installing GitBook 3.2.3
 sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 ```
 
-### 4、转成PDF格式
+## 4、转成PDF格式
 
 进入所在书籍 —> `gitbook pdf` —> `npm install svgexport -g` —> `gitbook pdf`
 

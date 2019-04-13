@@ -11,7 +11,13 @@ title: Mac Export the PDF file from gitbook
 
 建议选择LTS版本
 
-![Screen Shot 2019-04-13 at 20.49.40]({{"/_posts_pic/1.png"|absolute_url}})
+<figure> <a><img src="{{site.url}}/_posts_pic/2.png"></a> </figure>
+
+```text
+<figure>
+<a><img src="{{site.url}}/pics/branch.png"></a>
+</figure>
+```
 
 ## 2、安装gitbook
 
@@ -86,7 +92,7 @@ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 
 进入所在书籍 —> `gitbook pdf` —> `npm install svgexport -g` —> `gitbook pdf`
 
-![Screen Shot 2019-04-13 at 21.19.06]({{"/_posts_pic/4.png"|absolute_url}})
+![Screen Shot 2019-04-13 at 21.19.06]()
 
 
 

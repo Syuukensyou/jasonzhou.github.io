@@ -11,7 +11,7 @@ title: Mac Export the PDF file from gitbook
 
 建议选择LTS版本
 
-![](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/1.png?raw=true))
+![](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/1.png?raw=true)
 
 ## 2、安装gitbook
 

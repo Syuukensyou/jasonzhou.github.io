@@ -39,7 +39,7 @@ OOP：
 > >>
 > >> ```python
 > >> r1 = Role("A", "Police", "AK47", 1000)
-> >>
+> >> 
 > >> ### equals:
 > >> Role(r1, "A", "Police", "AK47", 1000)
 > >> # 即：
@@ -47,11 +47,11 @@ OOP：
 > >> r1.role = "Police"
 > >> r1.weapon = "AK47"
 > >> r1.money = 1000
-> >>
+> >> 
 > >> r1.prove = True  # 向实例r1中添加属性prove，仅限r1
 > >> del r1.weapon  # 去除r1的属性weapon，仅限r1
 > >> ```
-> >> ![class](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/class.png?raw=true)
+> >> ![class](https://raw.githubusercontent.com/Syuukensyou/syuukensyou.github.io/master/_posts_pic/class.png)
 > >
 > >
 > >
@@ -486,7 +486,7 @@ OOP：
 > >        return object.__new__(cls) #继承父亲的__new__方法，cls相当于Foo
 > >```
 > >
-> >![metaclass](https://github.com/Syuukensyou/syuukensyou.github.io/blob/master/_posts_pic/metaclass.png?raw=true)
+> >![metaclass](https://raw.githubusercontent.com/Syuukensyou/syuukensyou.github.io/master/_posts_pic/metaclass.png)
 > >
 > >`http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python`
 > >

@@ -108,5 +108,5 @@ fatal: Authentication failed for 'https://github.com/Syuukensyou/syuukensyou.git
 
 参考：
 
-[Connecting to GitHub with SSH]: https://help.github.com/en/articles/connecting-to-github-with-ssh	"为官网打call"
+[为官网打call](https://help.github.com/en/articles/connecting-to-github-with-ssh)
 

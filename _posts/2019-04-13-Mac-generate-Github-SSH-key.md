@@ -92,7 +92,19 @@ Hi Syuukensyou! You've successfully authenticated, but GitHub does not provide s
 
 皆大欢喜！！！
 
+# 7、push遇到问题
 
+问题：
+```shell
+➜  syuukensyou.github.io git:(master) ✗ git push origin master
+Username for 'https://github.com': syuukensyou
+Password for 'https://syuukensyou@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Syuukensyou/syuukensyou.github.io.git/'
+```
+
+解决方法：
+[使用二次认证的可以尝试这种提交方法](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
 
 参考：
 

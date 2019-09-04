@@ -1,5 +1,6 @@
 ---
-
+mathjax: true
+mathjax_autoNumber: true
 layout: post
 keys: 20190421
 tags: C Array Pointer

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 key: 20180410
 tags: install-win10
 ---

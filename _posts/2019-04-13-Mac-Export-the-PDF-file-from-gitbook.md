@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 keys: 20190413
 tags: Mac gitbook PDF calibre
 title: Mac Export the PDF file from gitbook

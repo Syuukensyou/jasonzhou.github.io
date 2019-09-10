@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 key: 20180508
 tags: windows vim setting
 ---

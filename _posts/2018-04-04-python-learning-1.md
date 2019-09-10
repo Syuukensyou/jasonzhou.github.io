@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 key: 20180404
 tags: Python getpass variable input output
 modify_date: 2018-04-06

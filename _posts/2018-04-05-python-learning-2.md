@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 key: 20180405
 tags: Python list dict tuple str bytes
 modify_date: 2018-04-06

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 key: 2018042501
 tags: Python generator Iterable Iterator
 ---

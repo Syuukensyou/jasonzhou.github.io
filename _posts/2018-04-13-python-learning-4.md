@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 key: 201804013
 tags: Python decorator
 ---

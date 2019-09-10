@@ -1,6 +1,6 @@
 ---
 
-layout: post
+layout: article
 keys: 20190413
 tags: Mac Github SSH
 title: Mac generate Github SSH key

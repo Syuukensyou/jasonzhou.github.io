@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 keys: 20180518
 tags: wxPython Frame App Dialog
 title: wxPython Day1

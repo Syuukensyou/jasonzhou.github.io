@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 keys: 20180426
 tags: Python OOP Class Object
 modify_date: 2018-04-28

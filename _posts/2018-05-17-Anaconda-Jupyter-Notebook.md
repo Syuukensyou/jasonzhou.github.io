@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 keys: 20180517
 tags: Windows Anaconda Jupyter-Notebook
 title: Anaconda Jupyter Notebook

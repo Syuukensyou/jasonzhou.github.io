@@ -1,7 +1,5 @@
 ---
-mathjax: true
-mathjax_autoNumber: true
-layout: post
+layout: article
 keys: 20190421
 tags: C Array Pointer
 title: C Array and Pointer

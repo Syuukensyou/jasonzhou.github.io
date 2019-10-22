@@ -106,6 +106,16 @@ fatal: Authentication failed for 'https://github.com/Syuukensyou/syuukensyou.git
 解决方法：
 [使用二次认证的可以尝试这种提交方法](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
 
+
+# 8、push代码到github上
+```git
+git add ./
+git pull origin master
+git commit -m "add git operation"
+git push origin master
+```
+
+
 参考：
 
 [为官网打call](https://help.github.com/en/articles/connecting-to-github-with-ssh)

@@ -7,23 +7,19 @@ title: C++ STL Array
 
 #   数组 array
 
-## c 语言
+## c 语言对应库：utarray.h
 
-### 对应库：utarray.h
+## c++ 语言对应库：array.h
 
-## c++ 语言
+## 方法 - Access
 
-### 对应库：array.h
-
-### 方法
-
-#### array::at(size_t)
+### array::at(size_t)
 
 返回值是一个引用，具体可以参考源码.
 
 如果越界，直接报异常：`out_of_range`
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::at
@@ -55,13 +51,11 @@ myarray contains: 1 2 3 4 5 6 7 8 9 10
 
 注：**如果不用`at`的方法去访问，也可以直接用`[]`去访问和修改元素的值。**
 
-
-
-#### array::front()、array::back()
+### array::front()、array::back()
 
 返回数组最后的元素。如果数组是空，则会异常`undefined behavior`
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::back
@@ -96,11 +90,83 @@ myarray now contains: 100 19 50
 
 
 
-#### array.fill(val)
+### array.data()
+
+返回数组的指针。
+
+-- Case:
+
+```cpp
+// array::data
+#include <iostream>
+#include <cstring>
+#include <array>
+
+int main ()
+{
+  const char* cstr = "Test string";
+  std::array<char,12> charray;
+
+  std::memcpy (charray.data(),cstr,12);
+
+  std::cout << charray.data() << '\n';
+
+  return 0;
+}
+```
+
+输出：（如果cstr比较长，则只能拷贝到数组的size）
+
+```
+Test string
+```
+
+### operator[]
+
+返回数组中指定的元素。
+
+-- Case:
+
+```cpp
+// array::operator[]
+#include <iostream>
+#include <array>
+
+int main ()
+{
+  std::array<int,10> myarray;
+  unsigned int i;
+
+  // assign some values:
+  for (i=0; i<10; i++) myarray[i]=i;
+
+  // print content
+  std::cout << "myarray contains:";
+  for (i=0; i<10; i++)
+    std::cout << ' ' << myarray[i];
+  std::cout << '\n';
+
+  return 0;
+}
+```
+
+输出：
+
+```
+myarray contains: 0 1 2 3 4 5 6 7 8 9
+```
+
+
+
+
+
+## 方法 - Modifers
+
+### array.fill(val)
 
 无论数组中是否有值，都以`val`去填充整个数组。
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::fill example
@@ -129,11 +195,11 @@ myarray contains: 5 5 5 5 5 5
 
 
 
-#### array.swap()
+### array.swap()
 
 交换两个数组，要求：元素类型一致，大小一致。如果不一致，报错。
 
-##### Case:
+-- Case:
 
 ```cpp
 // swap arrays
@@ -170,13 +236,15 @@ second: 10 20 30 40 50
 
 
 
-#### array.size()、array.max_size()、sizeof(array)
+## 方法 - Capacity
+
+### array.size()、array.max_size()、sizeof(array)
 
 对于`array`来说，`array.size() == array.max_size()`，返回的是数组所能够容纳的元素个数。
 
 `sizeof(array)`是数组所有元素所占用的内存空间，字节表示。	
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::size
@@ -214,11 +282,11 @@ sizeof: 24
 
 
 
-#### array.empty()
+### array.empty()
 
 如果数组的长度为0则返回true，否则false。
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::empty
@@ -244,83 +312,15 @@ second is not empty
 
 
 
-#### operator[]
-
-返回数组中的元素
-
-##### Case:
-
-```cpp
-// array::operator[]
-#include <iostream>
-#include <array>
-
-int main ()
-{
-  std::array<int,10> myarray;
-  unsigned int i;
-
-  // assign some values:
-  for (i=0; i<10; i++) myarray[i]=i;
-
-  // print content
-  std::cout << "myarray contains:";
-  for (i=0; i<10; i++)
-    std::cout << ' ' << myarray[i];
-  std::cout << '\n';
-
-  return 0;
-}
-```
-
-输出：
-
-```
-myarray contains: 0 1 2 3 4 5 6 7 8 9
-```
 
 
+## 方法 - Iterators
 
-#### array.data()
-
-返回数组的指针。
-
-##### Case:
-
-```cpp
-// array::data
-#include <iostream>
-#include <cstring>
-#include <array>
-
-int main ()
-{
-  const char* cstr = "Test string";
-  std::array<char,12> charray;
-
-  std::memcpy (charray.data(),cstr,12);
-
-  std::cout << charray.data() << '\n';
-
-  return 0;
-}
-```
-
-输出：（如果cstr比较长，则只能拷贝到数组的size）
-
-```
-Test string
-```
-
-
-
-
-
-#### array.begin()、array.end()
+### array.begin()、array.end()
 
 迭代器。可以对元素进行访问、修改。
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::begin example
@@ -348,11 +348,11 @@ myarray contains: 2 16 77 34 50
 
 
 
-#### array.cbegin()、array.cend()
+### array.cbegin()、array.cend()
 
 迭代器。只能对元素进行访问，**不能修改**。
 
-##### Case:
+-- Case:
 
 ```cpp
 // array::cbegin example
@@ -382,23 +382,23 @@ myarray contains: 2 16 77 34 50
 
 
 
-#### array.rbegin()、array.rend()
+### array.rbegin()、array.rend()
 
 反向迭代器。可以访问和修改。
 
-#### array.crbegin()、array.crend()
+### array.crbegin()、array.crend()
 
 反向静态迭代器。只能访问，不能对元素进行修改。
 
 
 
+## 方法 - 其他
 
-
-##### std::get<size_t>(array)
+### std::get<size_t>(array)
 
 获取数组中第size_t（0开始计数）的元素，可以访问和修改。
 
-##### Case:
+-- Case:
 
 ```cpp
 // arrays as tuples

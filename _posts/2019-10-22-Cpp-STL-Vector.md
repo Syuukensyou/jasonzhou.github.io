@@ -186,8 +186,9 @@ max_size: 4611686018427387903
 
 用法注释：`vector.resize(T, value)`，两个参数，有以下两种场景：
 
-     		1. `T >= vector.size()`，则扩充`T - vector.size()`个元素，并以`value`填充，如果没有`value`，则以0或者初始化值填充。
-     		2. `T < vector.size()`，则截取vector的前`T`个元素，其中`value`不起作用。
+1、 `T >= vector.size()`，则扩充`T - vector.size()`个元素，并以`value`填充，如果没有`value`，则以0或者初始化值填充。
+
+2、 `T < vector.size()`，则截取vector的前`T`个元素，其中`value`不起作用。
 
 -- case：
 
